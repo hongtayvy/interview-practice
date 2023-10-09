@@ -1,0 +1,5 @@
+### IntellIj IDEA
+.idea
+*.iml
+.DS_Store
+out
