@@ -1,4 +1,4 @@
-package problem;
+package solutions;
 
 public class FizzBuzz {
     public static void runFizzBuzz(int fizzBuzzMax){

@@ -1,4 +1,4 @@
-package problem;
+package solutions;
 
 public class Factorial {
     public static void runFactorial(int factorial){
