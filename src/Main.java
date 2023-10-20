@@ -1,14 +1,9 @@
 import java.util.Arrays;
 import java.util.HashMap;
-
-import static solutions.SellStocks.runSellStocks;
-import static solutions.TwoSums.runTwoSums;
-import static solutions.ValidParentheses.runValidParentheses;
+import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
-        int [] stocks = new int[]{7,1,5,3,6,4};
-        runSellStocks(stocks);
     }
 
     /**
@@ -27,13 +22,16 @@ public class Main {
      *         int[] nums = {2, 7, 11, 15};
      *         int target = 9;
      *         runTwoSums(nums, target);
-     * 
+     *
      *         int window = 3;
      *         int [] windowArr = {2, 1, 5, 1, 3, 2};
      *         runSlidingWindow(window, windowArr);
      *
      *         String validParentheses = "{}[]()";
      *         runValidParentheses(validParentheses);
+     *
+     *         int [] stocks = new int[]{7,1,5,3,6,4};
+     *         runSellStocks(stocks);
      *
      */
 }

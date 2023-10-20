@@ -20,7 +20,7 @@ public class SellStocks {
         int lowestStockPrice = Integer.MAX_VALUE;
 
         //Over profit will be the price minus the lowest stock price.
-        int overallProfit = 0;
+        int maxiumProfit = 0;
 
         //Current profit will be the calculation amount of the current price - lowest stock price
         int currentProfit = 0;
@@ -36,11 +36,11 @@ public class SellStocks {
             currentProfit = price - lowestStockPrice;
 
             //If the overall profit is less than the current profit we, then we now set the overall profit to the current profit.
-            if (overallProfit < currentProfit) {
-                overallProfit = currentProfit;
+            if (maxiumProfit < currentProfit) {
+                maxiumProfit = currentProfit;
             }
         }
 
-        System.out.println(overallProfit);
+        System.out.println(maxiumProfit);
     }
 }
