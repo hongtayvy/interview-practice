@@ -1,7 +1,7 @@
 package solutions;
 
 public class SlidingWindow {
-    public static void runSlidingWindow(int k, int[] arr){
+    public static void runSlidingWindowSolution(int k, int[] arr){
         //This is the placeholder for the highest value we created
         int maxSum = 0;
 
@@ -22,7 +22,7 @@ public class SlidingWindow {
             windowSum += arr[windowEnd]; // add the next element
             // slide the window, we don't need to slide if we've not hit the required window size of 'k'
             if (windowEnd >= k - 1) {
-                maxSum = (windowSum > maxSum ? windowSum : maxSum);
+                maxSum = Math.max(windowSum, maxSum);
                 windowSum -= arr[windowStart]; // subtract the element going out
                 windowStart++; // slide the window ahead
             }
