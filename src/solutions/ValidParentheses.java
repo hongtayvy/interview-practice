@@ -3,7 +3,7 @@ package solutions;
 import java.util.Stack;
 
 public class ValidParentheses {
-    public static void runValidParentheses(String parentheses){
+    public static void runValidParenthesesSolution(String parentheses){
         //We create a stack here to push any closing tag. We do this for the comparison case.
         Stack<Character> validateParentheses = new Stack();
 

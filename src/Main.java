@@ -1,195 +1,59 @@
 import java.util.HashMap;
+import java.util.Scanner;
 import java.util.Stack;
 
+import static solutions.ConstantTimeOperations.runConstantTimeOperationsSolution;
+import static solutions.Factorial.runFactorialSolution;
+import static solutions.Fibonacci.runFibonacciSolution;
+import static solutions.FizzBuzz.runFizzBuzzSolution;
+import static solutions.InvertCases.runInvertCasesSolution;
+import static solutions.Palindrome.runPalindromeSolution;
+import static solutions.ReverseString.runReverseStringSolution;
+import static solutions.SellStocks.runSellStocksSolution;
 import static solutions.SlidingWindow.runSlidingWindowSolution;
+import static solutions.SquareNum.runSquareSolution;
+import static solutions.SumDigits.runSumDigitsSolution;
+import static solutions.TwoSums.runTwoSumsSolution;
+import static solutions.ValidParentheses.runValidParenthesesSolution;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(runPalindrome("tacocat") ? "Is a valid palindrome" : "is not a valid palindrome");
-        System.out.println("Hello reversed is: " + runReverseString("hello"));
-        System.out.println("The factorial of 5 is " + runFactorial(5) + " and the unoptimized version is " + unoptimizedFactorial(5));
-        printArrayData(runTwoSums(new int[]{2, 7, 11, 15}, 9));
-        System.out.println(runValidParentheses("{}[]()") ? "They are valid parentheses" : "They are not valid parentheses");
-        System.out.println(runValidParentheses("{") ? "They are valid parentheses" : "They are not valid parentheses");
-        System.out.println("The max stock return is " + runSellStocks(new int[]{7,1,5,3,6,4}));
-        System.out.println("The max sum for the sliding window is " + runSlidingWindow(new int[]{2, 1, 5, 1, 3, 2}, 3));
-        printFibonacci(10);
-//        runFizzBuzz(16);
-    }
+        Scanner stdin = new Scanner(System.in);
+        System.out.println(AppConstants.MENU);
+        int choice = Integer.parseInt(stdin.nextLine());
 
-    private static boolean runPalindrome(String palindrome){
-        int leftPointer = 0;
-        int rightPointer = palindrome.length() - 1;
-
-        while(leftPointer < rightPointer){
-            if(palindrome.charAt(leftPointer) != palindrome.charAt(rightPointer)){
-                return false;
+        while(choice != 0){
+            switch(choice){
+                case 1 -> runFactorialSolution(AppConstants.FACTORIAL);
+                case 2 -> runFizzBuzzSolution(AppConstants.FIZZBUZZ);
+                case 3 -> runInvertCasesSolution(AppConstants.INVERT);
+                case 4 -> runPalindromeSolution(AppConstants.PALINDROME);
+                case 5 -> runReverseStringSolution(AppConstants.REVERSE);
+                case 6 -> runSellStocksSolution(AppConstants.STOCK_ARRAY);
+                case 7 -> runSlidingWindowSolution(AppConstants.WINDOW, AppConstants.WINDOW_ARRAY);
+                case 8 -> runSquareSolution(AppConstants.SQUARE);
+                case 9 -> runSumDigitsSolution(AppConstants.SUM_DIGITS);
+                case 10 -> runTwoSumsSolution(AppConstants.TWO_SUMS_ARRAY, AppConstants.TARGET);
+                case 11 -> runValidParenthesesSolution(AppConstants.PARENTHESES);
+                case 12 -> runConstantTimeOperationsSolution();
+                case 13 -> runFibonacciSolution(AppConstants.FIBONACCI);
+                default -> runSolution();
             }
 
-            leftPointer++;
-            rightPointer--;
-        }
+            System.out.println(AppConstants.RESELECT);
+            choice = Integer.parseInt(stdin.nextLine());
 
-        return true;
-    }
-    private static String runReverseString(String reverse){
-        int leftPointer = 0;
-        int rightPointer = reverse.length() - 1;
-        char[] array = reverse.toCharArray();
-
-        while(leftPointer < rightPointer){
-            char temp = array[leftPointer];
-            array[leftPointer] = array[rightPointer];
-            array[rightPointer] = temp;
-
-            leftPointer++;
-            rightPointer--;
-        }
-
-        return new String(array);
-
-    }
-    private static void runFizzBuzz(int n){
-        for(int i = 1; i < n; i++){
-            String fizz = (i % 3 == 0 ? "fizz" : "");
-            String buzz = (i % 5 == 0 ? "buzz" : "");
-
-            System.out.println((!fizz.isEmpty() || !buzz.isEmpty()) ? fizz + buzz : i);
-        }
-
-    }
-    private static int runFactorial(int n){
-        if(n == 0){
-            return 1;
-        } else{
-            return n * runFactorial(n -1);
-        }
-
-    }
-    private static int unoptimizedFactorial(int n){
-        int factorial = 1;
-        for(int i = n; i > 0; i--){
-            factorial *= i;
-        }
-        return factorial;
-    }
-    private static int[] runTwoSums(int[] nums, int target){
-        HashMap<Integer, Integer> hashMap = new HashMap<>();
-
-        for(int i = 0; i < nums.length; i++){
-            int complement = target - nums[i];
-
-            if(hashMap.containsKey(complement)){
-                return new int[]{hashMap.get(complement), i};
-            }
-
-            hashMap.put(nums[i], i);
-        }
-
-        return new int[]{};
-    }
-    private static boolean runValidParentheses(String parentheses){
-        char[] array = parentheses.toCharArray();
-        Stack<Character> stack = new Stack<>();
-        for(char p : array){
-            if(p == '['){
-                stack.push(']');
-            } else if(p == '{'){
-                stack.push('}');
-            } else if(p == '('){
-                stack.push(')');
-            } else if(stack.isEmpty() || stack.pop() != p){
-                return false;
+            switch(choice){
+                case 1 -> {
+                    System.out.println(AppConstants.MENU);
+                    choice = Integer.parseInt(stdin.nextLine());
+                }
+                case 2 -> choice = 0;
             }
         }
-
-        return stack.isEmpty();
-
-    }
-    private static int runSellStocks(int[] stocks){
-        int lowestPossibleStock = Integer.MAX_VALUE;
-        int currentProfit = 0;
-        int maxProfit = 0;
-
-        for(int stock : stocks){
-            if(lowestPossibleStock > stock){
-                lowestPossibleStock = stock;
-            }
-
-            currentProfit = stock - lowestPossibleStock;
-            if(maxProfit < currentProfit){
-                maxProfit = currentProfit;
-            }
-        }
-
-        return currentProfit;
     }
 
-    private static int runSlidingWindow(int[] windowArray, int window){
-        int windowSum = 0;
-        int maxSum = 0;
-        int windowStartPointer = 0;
+    private static void runSolution() {
 
-        for(int i = 0; i < windowArray.length; i++){
-            windowSum += windowArray[i];
-
-            if(i >= window -1 ){
-                maxSum = Math.max(windowSum, maxSum);
-                windowSum -= windowArray[windowStartPointer];
-                windowStartPointer++;
-            }
-        }
-
-        return maxSum;
     }
-
-    private static int fibonacci(int n){
-        if(n <= 1){
-            return n;
-        } else {
-            return fibonacci(n - 1) + fibonacci(n - 2);
-        }
-    }
-    private static void printFibonacci(int n){
-        for (int i = 0; i < n; i++) {
-            System.out.print(fibonacci(i) + " ");
-        }
-    }
-    private static void printArrayData(int[] array){
-        if(array != null){
-            for(int i : array){
-                System.out.println("Indicies are " + i);
-            }
-        } else {
-            System.out.println("there are no indicies available ");
-        }
-    }
-
-    /**
-     *         String palindrome = "tacocat";
-     *         runPalindrome(palindrome);
-     *
-     *         String reverse = "hello";
-     *         runReverseString(reverse);
-     *
-     *         int fizzBuzzMax = 100;
-     *         runFizzBuzz(fizzBuzzMax);
-     *
-     *         int factorial = 5;
-     *         runFactorial(factorial);
-     *
-     *         int[] nums = {2, 7, 11, 15};
-     *         int target = 9;
-     *         runTwoSums(nums, target);
-     *
-     *         int window = 3;
-     *         int [] windowArr = {2, 1, 5, 1, 3, 2};
-     *         runSlidingWindow(window, windowArr);
-     *
-     *         String validParentheses = "{}[]()";
-     *         runValidParentheses(validParentheses);
-     *
-     *         int [] stocks = new int[]{7,1,5,3,6,4};
-     *         runSellStocks(stocks);
-     */
 }

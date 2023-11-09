@@ -1,7 +1,7 @@
 package solutions;
 
 public class ReverseString {
-    public static void runReverseString(String reverse){
+    public static void runReverseStringSolution(String reverse){
         //Split the array for ease of swapping algorithm.
         char [] charArray = reverse.toCharArray();
 

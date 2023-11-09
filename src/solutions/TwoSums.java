@@ -3,7 +3,7 @@ package solutions;
 import java.util.HashMap;
 
 public class TwoSums {
-    public static void runTwoSums(int [] sumArray, int target){
+    public static void runTwoSumsSolution(int [] sumArray, int target){
         /**Create a new hashmap to store the values <sumArray[i], i>
          * We store the value into the key so in the future we can find the key
          * In which we store the index in the value

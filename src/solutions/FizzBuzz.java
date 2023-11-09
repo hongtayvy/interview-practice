@@ -1,7 +1,7 @@
 package solutions;
 
 public class FizzBuzz {
-    public static void runFizzBuzz(int fizzBuzzMax){
+    public static void runFizzBuzzSolution(int fizzBuzzMax){
         //A simple for loop to go through how many iterations the user wants
         for(int i = 1; i <= fizzBuzzMax; i++){
             //Calculate fizz
