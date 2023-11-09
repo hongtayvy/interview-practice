@@ -1,6 +1,6 @@
 # Interview Practice
-The following repository is the result of some simple "leetcode" problems that one would find in a possible interview. 
-Each problem has a solution attached to them. You can practice writing them simply in main. 
+This repo contains different questions in which I've come across
+during my job search. 
 
 ## Current Solutions
 - [x] Factorial
@@ -10,4 +10,8 @@ Each problem has a solution attached to them. You can practice writing them simp
 - [x] SellStocks
 - [x] SlidingWindow
 - [x] TwoSums
-- [x] ValidParathenses 
+- [x] ValidParentheses
+- [x] O(1) Min, Max, Mean, and Mode
+- [x] Square A Number
+- [x] Invert Cases
+- [x] Sum of the Digits

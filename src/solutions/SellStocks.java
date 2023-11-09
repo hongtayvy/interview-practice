@@ -15,7 +15,7 @@ public class SellStocks {
      * overallProfit less than currentProfit which is 5 so we switch overallProfit to 5.
      * @param prices
      */
-    public static void runSellStocks(int [] prices){
+    public static void runSellStocksSolution(int [] prices){
         //Default to max integer value
         int lowestStockPrice = Integer.MAX_VALUE;
 

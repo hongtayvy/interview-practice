@@ -4,7 +4,7 @@ public class Palindrome {
     /**
      * We don't care to store any data to double-check this. We can manually just check this information.
      */
-    public static void runPalindrome(String palindrome){
+    public static void runPalindromeSolution(String palindrome){
         //Starting point
         int start = 0;
 
