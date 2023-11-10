@@ -35,7 +35,4 @@ public class AppConstants {
     public final static int WINDOW = 3;
     public final static int[] WINDOW_ARRAY = {2, 1, 5, 1, 3, 2};
     public final static int[] STOCK_ARRAY = {7,1,5,3,6,4};
-
-
-
 }

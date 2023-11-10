@@ -1,6 +1,4 @@
-import java.util.HashMap;
 import java.util.Scanner;
-import java.util.Stack;
 
 import static solutions.ConstantTimeOperations.runConstantTimeOperationsSolution;
 import static solutions.Factorial.runFactorialSolution;
