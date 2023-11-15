@@ -1,3 +1,5 @@
+package assets;
+
 public class AppConstants {
     public final static String MENU = """
             Please select what you would like to do:\s
@@ -21,7 +23,7 @@ public class AppConstants {
             1. Run Another Solution
             2. Exit
             """;
-    public final static String INVERT = "Hello World";
+    public final static String INVERT = "Hello";
     public final static String PALINDROME = "tacocat";
     public final static String REVERSE = "Reverse" ;
     public final static String PARENTHESES = "{}[]()" ;
