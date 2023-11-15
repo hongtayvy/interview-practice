@@ -4,18 +4,19 @@ public class InvertCases {
     /**
      * We want to change any lowercases to uppercases, vice versa.
      */
-    public static void runInvertCasesSolution(String invert){
+    public static String runInvertCasesSolution(String invert){
+        //We create a char array here to modify the char at each index. This allows us to not have to restore the data.
         char[] array = invert.toCharArray();
 
         for(int i = 0; i < array.length; i++){
-            char c = array[i];
-            if(Character.isLowerCase(c)){
-                array[i] = Character.toUpperCase(c);
+            //We check if the character is lowercase, if it is we will uppercase that character vice versa.
+            if(Character.isLowerCase(array[i])){
+                array[i] = Character.toUpperCase(array[i]);
             } else {
-                array[i] = Character.toLowerCase(c);
+                array[i] = Character.toLowerCase(array[i]);
             }
         }
 
-        System.out.println("Original phrase was: " + invert + " now flipped cases is: " + new String(array));
+        return new String(array);
     }
 }

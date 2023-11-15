@@ -5,7 +5,7 @@ public class SumDigits {
      * The idea is to add the digits of the number i.e.
      * 121 = 4;
      */
-    public static void runSumDigitsSolution(int number){
+    public static int runSumDigitsSolution(int number){
         int numSum = 0;
         String numString = Integer.toString(number);
         char[] numArray = numString.toCharArray();
@@ -16,6 +16,6 @@ public class SumDigits {
             }
         }
 
-        System.out.printf("The sum of %d is %d", number, numSum);
+        return numSum;
     }
 }

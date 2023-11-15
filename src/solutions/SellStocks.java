@@ -6,16 +6,17 @@ public class SellStocks {
      *
      * lowestStockPrice = 7
      * currentProfit = 7(current index) - 7(lowest stock price)
-     * overallProfit = 0 so we do no switch the value.
+     * overallProfit = 0, so we do not switch the value.
      *
      * Solution Run looks like:
      * lowestStockPrice = 1
      * currentProfit = 6(current index) - 1(lowest stock price)
      * overallProfit is currently 4.
-     * overallProfit less than currentProfit which is 5 so we switch overallProfit to 5.
+     * overallProfit less than currentProfit which is 5, so we switch overallProfit to 5.
      * @param prices
+     * @return Integer
      */
-    public static void runSellStocksSolution(int [] prices){
+    public static int runSellStocksSolution(int [] prices){
         //Default to max integer value
         int lowestStockPrice = Integer.MAX_VALUE;
 
@@ -41,6 +42,6 @@ public class SellStocks {
             }
         }
 
-        System.out.println(maxiumProfit);
+        return maxiumProfit;
     }
 }

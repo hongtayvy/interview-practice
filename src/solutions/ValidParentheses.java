@@ -3,15 +3,12 @@ package solutions;
 import java.util.Stack;
 
 public class ValidParentheses {
-    public static void runValidParenthesesSolution(String parentheses){
+    public static boolean runValidParenthesesSolution(String parentheses){
         //We create a stack here to push any closing tag. We do this for the comparison case.
         Stack<Character> validateParentheses = new Stack();
 
         //Convert String to char []
         char [] parenthesesArray = parentheses.toCharArray();
-
-        //Only in intellij, we keep track of this.
-        boolean isValid = true;
 
         //Loop through character array
         for(char x : parenthesesArray){
@@ -31,14 +28,10 @@ public class ValidParentheses {
             } else if(x == '['){
                 validateParentheses.push(']');
             } else if (validateParentheses.isEmpty() || x != validateParentheses.pop()){
-                isValid = false;
+                return false;
             }
         }
 
-        if(isValid){
-            System.out.println("This is a valid parentheses string.");
-        } else {
-            System.out.println("This is not a valid parentheses string");
-        }
+        return validateParentheses.isEmpty();
     }
 }

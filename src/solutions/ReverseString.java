@@ -1,31 +1,29 @@
 package solutions;
 
 public class ReverseString {
-    public static void runReverseStringSolution(String reverse){
+    public static String runReverseStringSolution(String reverse){
         //Split the array for ease of swapping algorithm.
         char [] charArray = reverse.toCharArray();
 
         //Starting point.
-        int start = 0;
+        int leftPointer = 0;
 
         //Ending point.
-        int end = reverse.length() - 1;
+        int rightPointer = reverse.length() - 1;
 
         //While loop to go through the two points.
-        while(start < end){
+        while(leftPointer < rightPointer){
             //Swapping algorithm
-            char temp = charArray[start];
-            charArray[start] = charArray[end];
-            charArray[end] = temp;
+            char temp = charArray[leftPointer];
+            charArray[leftPointer] = charArray[rightPointer];
+            charArray[rightPointer] = temp;
 
             //Increment
-            start++;
-            end--;
+            leftPointer++;
+            rightPointer--;
         }
 
-        //Print data for verification
-        System.out.println("String is originally: " + reverse +
-                " reversed is: " + new String(charArray)
-        );
+        //Return the character array as a new String
+        return new String(charArray);
     }
 }

@@ -1,8 +1,8 @@
 package solutions;
 
 public class Factorial {
-    public static void runFactorialSolution(int factorial){
-        System.out.println("Factorial of " + factorial + " is: " + calculateFactorial(factorial));
+    public static int runFactorialSolution(int factorial){
+        return calculateFactorial(factorial);
     }
 
     //This method recursively solves the problem

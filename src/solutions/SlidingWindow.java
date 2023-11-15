@@ -1,7 +1,7 @@
 package solutions;
 
 public class SlidingWindow {
-    public static void runSlidingWindowSolution(int k, int[] arr){
+    public static int runSlidingWindowSolution(int k, int[] arr){
         //This is the placeholder for the highest value we created
         int maxSum = 0;
 
@@ -27,6 +27,6 @@ public class SlidingWindow {
                 windowStart++; // slide the window ahead
             }
         }
-        System.out.println("Max sum is: " + maxSum);
+        return maxSum;
     }
 }
