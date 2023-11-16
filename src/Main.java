@@ -1,4 +1,6 @@
 import assets.AppConstants;
+
+import java.util.Arrays;
 import java.util.Scanner;
 
 import static solutions.ConstantTimeOperations.runConstantTimeOperationsSolution;
@@ -23,20 +25,19 @@ public class Main {
 
         while(choice != 0){
             switch(choice){
-                case 1 -> runFactorialSolution(AppConstants.FACTORIAL);
+                case 1 -> System.out.println(runFactorialSolution(AppConstants.FACTORIAL));
                 case 2 -> runFizzBuzzSolution(AppConstants.FIZZBUZZ);
-                case 3 -> runInvertCasesSolution(AppConstants.INVERT);
-                case 4 -> runPalindromeSolution(AppConstants.PALINDROME);
-                case 5 -> runReverseStringSolution(AppConstants.REVERSE);
-                case 6 -> runSellStocksSolution(AppConstants.STOCK_ARRAY);
-                case 7 -> runSlidingWindowSolution(AppConstants.WINDOW, AppConstants.WINDOW_ARRAY);
-                case 8 -> runSquareSolution(AppConstants.SQUARE);
-                case 9 -> runSumDigitsSolution(AppConstants.SUM_DIGITS);
-                case 10 -> runTwoSumsSolution(AppConstants.TWO_SUMS_ARRAY, AppConstants.TARGET);
-                case 11 -> runValidParenthesesSolution(AppConstants.PARENTHESES);
+                case 3 -> System.out.println(runInvertCasesSolution(AppConstants.INVERT));
+                case 4 -> System.out.println(runPalindromeSolution(AppConstants.PALINDROME));
+                case 5 -> System.out.println(runReverseStringSolution(AppConstants.REVERSE));
+                case 6 -> System.out.println(runSellStocksSolution(AppConstants.STOCK_ARRAY));
+                case 7 -> System.out.println(runSlidingWindowSolution(AppConstants.WINDOW, AppConstants.WINDOW_ARRAY));
+                case 8 -> System.out.println(runSquareSolution(AppConstants.SQUARE));
+                case 9 -> System.out.println(runSumDigitsSolution(AppConstants.SUM_DIGITS));
+                case 10 -> System.out.println(Arrays.toString(runTwoSumsSolution(AppConstants.TWO_SUMS_ARRAY, AppConstants.TARGET)));
+                case 11 -> System.out.println(runValidParenthesesSolution(AppConstants.PARENTHESES));
                 case 12 -> runConstantTimeOperationsSolution();
                 case 13 -> runFibonacciSolution(AppConstants.FIBONACCI);
-                default -> runSolution();
             }
 
             System.out.println(AppConstants.RESELECT);
@@ -50,9 +51,5 @@ public class Main {
                 case 2 -> choice = 0;
             }
         }
-    }
-
-    private static void runSolution() {
-
     }
 }

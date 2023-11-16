@@ -8,7 +8,6 @@ and my solution against each other to make sure I have matching outputs.
 
 ## Next Feature
 - Fix the main method's current output
-- Run all of the tests
 
 ## Current Solutions
 - [x] Factorial
