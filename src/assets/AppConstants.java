@@ -23,10 +23,14 @@ public class AppConstants {
             1. Run Another Solution
             2. Exit
             """;
+
+    public final static String MATCHING_METHOD_DISPLAY = "Daily solution and method have matching outputs";
     public final static String INVERT = "Hello";
     public final static String PALINDROME = "tacocat";
+    public final static String NONPALINDROME = "world";
     public final static String REVERSE = "Reverse" ;
     public final static String PARENTHESES = "{}[]()" ;
+    public final static String INVALID_PARENTHESES = "{{" ;
     public final static int FIZZBUZZ = 15;
     public final static int FIBONACCI = 10;
     public final static int SQUARE = 2;

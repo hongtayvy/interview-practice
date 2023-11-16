@@ -1,16 +1,22 @@
 package solutions;
 
-import assets.AppConstants;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static assets.AppConstants.MATCHING_METHOD_DISPLAY;
+import static assets.AppConstants.SUM_DIGITS;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SumDigitsTest {
 
     @Test
-    @DisplayName("Adds the digits individually togethe")
+    @DisplayName("Adds the digits individually together")
     void runSumDigitsSolution() {
-        assertEquals(4, SumDigits.runSumDigitsSolution(AppConstants.SUM_DIGITS));
+        assertEquals(4, SumDigits.runSumDigitsSolution(SUM_DIGITS));
+    }
+    @Test
+    @DisplayName(MATCHING_METHOD_DISPLAY)
+    void runMatchingSumDigitsSolution() {
+        assertEquals(DailySolutions.runSumDigits(SUM_DIGITS), SumDigits.runSumDigitsSolution(SUM_DIGITS));
     }
 }

@@ -2,10 +2,13 @@
 This repo contains different questions in which I've come across
 during my job search. 
 
-## State Of Project
-The current state of this project is to modify the project to run
-through the tests with my solutions. You can run main(...) as well
-which will currently prompt you with a text based menu. 
+## Latest Feature
+I fixed the JUnit Testing. I have added a test to run both my daily method
+and my solution against each other to make sure I have matching outputs.
+
+## Next Feature
+- Fix the main method's current output
+- Run all of the tests
 
 ## Current Solutions
 - [x] Factorial
