@@ -14,19 +14,20 @@ public class DailySolutions {
         } else {
             return f * factorial(f - 1);
         }
+
     }
     public static String runInvertCases(String invert){
-        char[] invertArray = invert.toCharArray();
+        char [] array = invert.toCharArray();
 
-        for(int i = 0; i < invertArray.length; i++){
-            if(Character.isLowerCase(invertArray[i])){
-                invertArray[i] = Character.toUpperCase(invertArray[i]);
+        for(int i = 0; i < array.length; i++){
+            if (Character.isLowerCase(array[i])) {
+                array[i] = Character.toUpperCase(array[i]);
             } else {
-                invertArray[i] = Character.toLowerCase(invertArray[i]);
+                array[i] = Character.toLowerCase(array[i]);
             }
         }
 
-        return new String(invertArray);
+        return new String(array);
     }
 
     public static boolean runPalindrome(String palindrome){
@@ -48,7 +49,8 @@ public class DailySolutions {
     public static String runReverseString(String reverse){
         int leftPointer = 0;
         int rightPointer = reverse.length() - 1;
-        char[] array = reverse.toCharArray();
+
+        char [] array = reverse.toCharArray();
 
         while(leftPointer < rightPointer){
             char temp = array[leftPointer];
@@ -60,19 +62,20 @@ public class DailySolutions {
         }
 
         return new String(array);
+
     }
 
     public static int runSellStocks(int[] stocks){
         int lowestPossibleStock = Integer.MAX_VALUE;
-        int currentProfit = 0;
         int maximumProfit = 0;
 
-        for(int stock: stocks){
+        for(int stock : stocks){
             if(lowestPossibleStock > stock){
                 lowestPossibleStock = stock;
             }
 
-            currentProfit = stock - lowestPossibleStock;
+            int currentProfit = stock - lowestPossibleStock;
+
             if(maximumProfit < currentProfit){
                 maximumProfit = currentProfit;
             }
@@ -84,15 +87,15 @@ public class DailySolutions {
     public static int runSlidingWindow(int window, int[] windowArray){
         int maxSum = 0;
         int windowSum = 0;
-        int windowCounter = 0;
+        int windowIndex = 0;
 
         for(int i = 0; i < windowArray.length; i++){
             windowSum += windowArray[i];
 
             if(i >= window - 1){
                 maxSum = Math.max(maxSum, windowSum);
-                windowSum -= windowArray[windowCounter];
-                windowCounter++;
+                windowSum -= windowArray[windowIndex];
+                windowIndex++;
             }
         }
 
@@ -104,15 +107,11 @@ public class DailySolutions {
     }
 
     public static int runSumDigits(int number){
-        String numString = Integer.toString(number);
         int sum = 0;
-
-        for(int i = 0; i < numString.length(); i++){
-            if(Character.isDigit(numString.charAt(i))){
-                sum += Character.digit(numString.charAt(i), 10);
-            }
+        while(number != 0){
+            sum = sum + (number % 10);
+            number /= 10;
         }
-
         return sum;
     }
 
@@ -129,20 +128,19 @@ public class DailySolutions {
             hashMap.put(array[i], i);
         }
 
-        return new int []{};
+        return new int[]{};
     }
 
     public static boolean runValidParentheses(String parentheses){
-        char[] array = parentheses.toCharArray();
         Stack<Character> stack = new Stack<>();
-        for(char p : array){
-            if(p == '{'){
-                stack.push('}');
-            } else if(p == '['){
+        for(char p : parentheses.toCharArray()){
+            if(p == '['){
                 stack.push(']');
+            } else if(p == '{'){
+                stack.push('}');
             } else if(p == '('){
                 stack.push(')');
-            } else if(stack.isEmpty() || stack.pop() != p){
+            } else if(stack.isEmpty() || stack.pop() != p) {
                 return false;
             }
         }

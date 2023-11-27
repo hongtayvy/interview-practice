@@ -17,6 +17,6 @@ class SumDigitsTest {
     @Test
     @DisplayName(MATCHING_METHOD_DISPLAY)
     void runMatchingSumDigitsSolution() {
-        assertEquals(DailySolutions.runSumDigits(SUM_DIGITS), SumDigits.runSumDigitsSolution(SUM_DIGITS));
+        assertEquals(SumDigits.runSumDigitsSolution(SUM_DIGITS), DailySolutions.runSumDigits(SUM_DIGITS));
     }
 }

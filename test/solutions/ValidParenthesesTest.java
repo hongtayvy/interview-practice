@@ -26,8 +26,8 @@ class ValidParenthesesTest {
     @DisplayName(MATCHING_METHOD_DISPLAY)
     void runMatchingParenthesesMethods() {
         assertEquals(
-                DailySolutions.runValidParentheses(PARENTHESES),
-                ValidParentheses.runValidParenthesesSolution(PARENTHESES)
+                ValidParentheses.runValidParenthesesSolution(PARENTHESES),
+                DailySolutions.runValidParentheses(PARENTHESES)
         );
     }
 }

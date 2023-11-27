@@ -17,7 +17,7 @@ class InvertCasesTest {
     @Test
     @DisplayName(MATCHING_METHOD_DISPLAY)
     void runMatchingInvertCasesMethods() {
-        assertEquals(DailySolutions.runInvertCases(INVERT), InvertCases.runInvertCasesSolution(INVERT));
+        assertEquals(InvertCases.runInvertCasesSolution(INVERT), DailySolutions.runInvertCases(INVERT));
     }
 
 }
