@@ -14,7 +14,6 @@ public class DailySolutions {
         }
 
         return f * factorial(f - 1);
-
     }
     public static String runInvertCases(String invert){
         char[] array = invert.toCharArray();
@@ -170,5 +169,22 @@ public class DailySolutions {
         }
 
         return missingNumber;
+    }
+
+    public static String runFibonacci(int fibonacci){
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < fibonacci; i++){
+            sb.append(fibonacci(i)).append(" ");
+        }
+
+        return sb.toString();
+    }
+
+    private static int fibonacci(int f){
+        if(f <= 1){
+            return f;
+        }
+
+        return fibonacci(f - 1) + fibonacci(f - 2);
     }
 }

@@ -33,7 +33,7 @@ public class AppConstants {
     public final static String PARENTHESES = "{}[]()" ;
     public final static String INVALID_PARENTHESES = "{{" ;
     public final static int FIZZBUZZ = 15;
-    public final static int FIBONACCI = 10;
+    public final static int FIBONACCI = 8;
     public final static int SQUARE = 2;
     public final static int SUM_DIGITS = 121;
     public final static int FACTORIAL = 5;

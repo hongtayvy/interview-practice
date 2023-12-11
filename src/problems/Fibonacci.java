@@ -7,10 +7,11 @@ public class Fibonacci {
         }
         return fibonacci(f - 1) + fibonacci(f - 2);
     }
-    public static void runFibonacciSolution(int fib){
+    public static String runFibonacciSolution(int fib){
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < fib; i++) {
-            System.out.print(fibonacci(i) + " ");
+            sb.append(fibonacci(i)).append(" ");
         }
-        System.out.println("\n");
+        return sb.toString();
     }
 }
