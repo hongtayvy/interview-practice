@@ -1,7 +1,8 @@
-package solutions;
+package problems;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import solutions.DailySolutions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static assets.AppConstants.MATCHING_METHOD_DISPLAY;
@@ -19,6 +20,6 @@ class SellStocksTest {
     @Test
     @DisplayName(MATCHING_METHOD_DISPLAY)
     void runMatchingSellStockMethods() {
-        assertEquals(DailySolutions.runSellStocks(STOCK_ARRAY), SellStocks.runSellStocksSolution(STOCK_ARRAY));
+        assertEquals(SellStocks.runSellStocksSolution(STOCK_ARRAY), DailySolutions.runSellStocks(STOCK_ARRAY));
     }
 }

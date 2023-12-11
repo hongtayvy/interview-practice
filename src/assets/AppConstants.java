@@ -17,6 +17,7 @@ public class AppConstants {
             11. Run Valid Parentheses Solution \s
             12. Run Constant Time Operations \s
             13. Run Fibonacci Solution \s
+            14. Run Missing Number Solution \s
             """;
     public final static String RESELECT = """
             What would you like to do next?
@@ -41,4 +42,6 @@ public class AppConstants {
     public final static int WINDOW = 3;
     public final static int[] WINDOW_ARRAY = {2, 1, 5, 1, 3, 2};
     public final static int[] STOCK_ARRAY = {7,1,5,3,6,4};
+    public final static int[] MISSING_NUMBER_ARRAY = {1, 2, 4, 6, 3, 7, 8};
+    public final static int MISSING_NUMBER_MAX = 8;
 }

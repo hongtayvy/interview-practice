@@ -1,4 +1,4 @@
-package solutions;
+package problems;
 
 public class SlidingWindow {
     public static int runSlidingWindowSolution(int k, int[] arr){

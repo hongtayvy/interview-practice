@@ -1,11 +1,12 @@
-package solutions;
+package problems;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import solutions.DailySolutions;
 
 import static assets.AppConstants.MATCHING_METHOD_DISPLAY;
 import static assets.AppConstants.FACTORIAL;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FactorialTest {
 
@@ -17,6 +18,6 @@ class FactorialTest {
     @Test
     @DisplayName(MATCHING_METHOD_DISPLAY)
     void runMatchingFactorialSolutions() {
-        assertEquals(DailySolutions.runFactorial(FACTORIAL), Factorial.runFactorialSolution(FACTORIAL));
+        assertEquals(Factorial.runFactorialSolution(FACTORIAL), DailySolutions.runFactorial(FACTORIAL));
     }
 }

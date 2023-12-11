@@ -1,4 +1,4 @@
-package solutions;
+package problems;
 
 public class ReverseString {
     public static String runReverseStringSolution(String reverse){
