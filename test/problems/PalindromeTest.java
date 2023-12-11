@@ -1,7 +1,8 @@
-package solutions;
+package problems;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import solutions.DailySolutions;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -27,6 +28,6 @@ class PalindromeTest {
     @Test
     @DisplayName(MATCHING_METHOD_DISPLAY)
     void runMatchingPalindromeMethods(){
-        assertEquals(DailySolutions.runPalindrome(PALINDROME), Palindrome.runPalindromeSolution(PALINDROME));
+        assertEquals(Palindrome.runPalindromeSolution(PALINDROME), DailySolutions.runPalindrome(PALINDROME));
     }
 }

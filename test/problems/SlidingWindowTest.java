@@ -1,7 +1,8 @@
-package solutions;
+package problems;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import solutions.DailySolutions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static assets.AppConstants.MATCHING_METHOD_DISPLAY;
@@ -19,6 +20,6 @@ class SlidingWindowTest {
     @Test
     @DisplayName(MATCHING_METHOD_DISPLAY)
     void runMatchingSlidingWindowSolutions() {
-        assertEquals(DailySolutions.runSlidingWindow(WINDOW, WINDOW_ARRAY), SlidingWindow.runSlidingWindowSolution(WINDOW, WINDOW_ARRAY));
+        assertEquals(SlidingWindow.runSlidingWindowSolution(WINDOW, WINDOW_ARRAY), DailySolutions.runSlidingWindow(WINDOW, WINDOW_ARRAY));
     }
 }

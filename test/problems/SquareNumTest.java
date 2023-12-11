@@ -1,7 +1,8 @@
-package solutions;
+package problems;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import solutions.DailySolutions;
 
 import static assets.AppConstants.MATCHING_METHOD_DISPLAY;
 import static assets.AppConstants.SQUARE;
@@ -17,6 +18,6 @@ class SquareNumTest {
     @Test
     @DisplayName(MATCHING_METHOD_DISPLAY)
     void runMatchingSquareMethods() {
-        assertEquals(DailySolutions.runSquareNum(SQUARE), SquareNum.runSquareSolution(SQUARE));
+        assertEquals(SquareNum.runSquareSolution(SQUARE), DailySolutions.runSquareNum(SQUARE));
     }
 }

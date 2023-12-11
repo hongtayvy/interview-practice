@@ -1,4 +1,4 @@
-package solutions;
+package problems;
 
 public class Fibonacci {
     private static int fibonacci(int f){

@@ -1,7 +1,8 @@
-package solutions;
+package problems;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import solutions.DailySolutions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static assets.AppConstants.MATCHING_METHOD_DISPLAY;

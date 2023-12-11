@@ -1,7 +1,8 @@
-package solutions;
+package problems;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import solutions.DailySolutions;
 
 import static assets.AppConstants.MATCHING_METHOD_DISPLAY;
 import static assets.AppConstants.TWO_SUMS_ARRAY;
@@ -19,8 +20,8 @@ class TwoSumsTest {
     @DisplayName(MATCHING_METHOD_DISPLAY)
     void runMatchingTwoSumMethods() {
         assertArrayEquals(
-                DailySolutions.runTwoSums(TWO_SUMS_ARRAY, TARGET),
-                TwoSums.runTwoSumsSolution(TWO_SUMS_ARRAY, TARGET)
+                TwoSums.runTwoSumsSolution(TWO_SUMS_ARRAY, TARGET),
+                DailySolutions.runTwoSums(TWO_SUMS_ARRAY, TARGET)
         );
     }
 }

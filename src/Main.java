@@ -3,19 +3,21 @@ import assets.AppConstants;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import static solutions.ConstantTimeOperations.runConstantTimeOperationsSolution;
-import static solutions.Factorial.runFactorialSolution;
-import static solutions.Fibonacci.runFibonacciSolution;
-import static solutions.FizzBuzz.runFizzBuzzSolution;
-import static solutions.InvertCases.runInvertCasesSolution;
-import static solutions.Palindrome.runPalindromeSolution;
-import static solutions.ReverseString.runReverseStringSolution;
-import static solutions.SellStocks.runSellStocksSolution;
-import static solutions.SlidingWindow.runSlidingWindowSolution;
-import static solutions.SquareNum.runSquareSolution;
-import static solutions.SumDigits.runSumDigitsSolution;
-import static solutions.TwoSums.runTwoSumsSolution;
-import static solutions.ValidParentheses.runValidParenthesesSolution;
+import static problems.ConstantTimeOperations.runConstantTimeOperationsSolution;
+import static problems.Factorial.runFactorialSolution;
+import static problems.Fibonacci.runFibonacciSolution;
+import static problems.FizzBuzz.runFizzBuzzSolution;
+import static problems.InvertCases.runInvertCasesSolution;
+import static problems.MissingNumber.runMissingNumberSolutionWithoutEquation;
+import static problems.Palindrome.runPalindromeSolution;
+import static problems.ReverseString.runReverseStringSolution;
+import static problems.SellStocks.runSellStocksSolution;
+import static problems.SlidingWindow.runSlidingWindowSolution;
+import static problems.SquareNum.runSquareSolution;
+import static problems.SumDigits.runSumDigitsSolution;
+import static problems.TwoSums.runTwoSumsSolution;
+import static problems.ValidParentheses.runValidParenthesesSolution;
+import static problems.MissingNumber.runMissingNumberSolution;
 
 public class Main {
     public static void main(String[] args) {
@@ -38,6 +40,7 @@ public class Main {
                 case 11 -> System.out.println(runValidParenthesesSolution(AppConstants.PARENTHESES));
                 case 12 -> runConstantTimeOperationsSolution();
                 case 13 -> runFibonacciSolution(AppConstants.FIBONACCI);
+                case 14 -> System.out.println(runMissingNumberSolution(AppConstants.MISSING_NUMBER_ARRAY, AppConstants.MISSING_NUMBER_MAX));
             }
 
             System.out.println(AppConstants.RESELECT);
