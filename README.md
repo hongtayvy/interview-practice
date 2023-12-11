@@ -22,3 +22,5 @@ and my solution against each other to make sure I have matching outputs.
 - [x] Square A Number
 - [x] Invert Cases
 - [x] Sum of the Digits
+- [x] Missing Number
+
